@@ -3,9 +3,11 @@ program loop
 
   implicit none
 
-do while (.TRUE.)
+do
 
-  print*, "let's see what happens"
+  print*, "Hello World"
+
+  exit
 
 end do
 
