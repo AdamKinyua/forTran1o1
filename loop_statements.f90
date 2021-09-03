@@ -2,14 +2,12 @@ program while_loop
 
   implicit none
 
-  integer :: i
+  integer:: i
 
-  do i = 1, 5
+  do i = 1,999
 
     print*, i
 
-
   end do
-
 
 end program

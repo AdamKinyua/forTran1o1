@@ -1,7 +1,7 @@
 program if_statements
   implicit none
-    if (.true)
-      print* "Great"
+    if (.true.)
+      print*,"Great"
     if (.false.)
       print*, "this won't work"
 
