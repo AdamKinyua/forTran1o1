@@ -2,9 +2,10 @@ program the_divine_proportion
 
   implicit none 
 
-    print*,fibonaccio(0, 1, 10)
+    print*,fibonaccio(0, 1, 20)
 
     stop
+
 
   contains 
 
