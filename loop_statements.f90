@@ -1,14 +1,14 @@
-program loops
+program loop
 
   implicit none
 
   integer :: i
 
-  do i = 1,6
+  do i = 1,5
 
     print*, i
 
   end do
 
 
-end program
+end program loop
