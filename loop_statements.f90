@@ -1,13 +1,14 @@
-program while_loop
+program loops
 
   implicit none
 
-  integer:: i
+  integer :: i
 
-  do i = 1,999
+  do i = 1,6
 
     print*, i
 
   end do
+
 
 end program
