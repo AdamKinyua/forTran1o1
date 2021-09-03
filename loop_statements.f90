@@ -1,14 +1,13 @@
+!Runs infinitely
 program loop
 
   implicit none
 
-  integer :: i
+do while (.TRUE.)
 
-  do i = 1,5
+  print*, "let's see what happens"
 
-    print*, i
-
-  end do
+end do
 
 
 end program loop
