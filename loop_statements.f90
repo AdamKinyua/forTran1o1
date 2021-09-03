@@ -3,13 +3,15 @@ program loop
 
   implicit none
 
-do
+  integer:: x
 
-  print*, "Hello World"
+  do 
 
-  exit
+    print*, "this seems really fun"
 
-end do
+    exit
+
+  end do
 
 
 end program loop
