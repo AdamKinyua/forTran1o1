@@ -2,8 +2,8 @@ program squareroots_1
 
   implicit none 
 
-  integer:: x
-  integer, dimension(10)::square_rt
+  real:: x
+  real, dimension(10)::square_rt
 
   square_rt = 0
 
