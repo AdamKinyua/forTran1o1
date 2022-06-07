@@ -4,34 +4,41 @@ program vol
 
     ! varaiables declaration 
     double precision:: radius1, radius2, volume1, volume2
+    character::response
     !
 
     !
-    print*, "Enter radius1 and radius2 in double precision: "
-    read *, radius1, radius2
+    do 
+        print*, "Enter radius1 and radius2 in double precision: "
+        read *, radius1, radius2
     !
 
     !
-!    volume1 = volu(2)
-!    volume2 = volu(4)
+    !    volume1 = volu(2)
+    !    volume2 = volu(4)
     !
 
-!    print*, "Function Results"
-!    print*, "Volume difference is: ", volume1-volume2
+    !    print*, "Function Results"
+    !    print*, "Volume difference is: ", volume1-volume2
 
     !
     !
-    call volum(radius1, volume1)
-    call volum(radius2, volume2)
-    print*, "----Subroutine Results----"
-    print*, "vol 1: ", volume1, "vol 2: ", volume2
-    print*, "Volume difference is: ", volume2-volume1
-    print*, "Printing absolute difference: ", abs(volume2-volume1)
+        call volum(radius1, volume1)
+        call volum(radius2, volume2)
+        print*, "----Subroutine Results----"
+        print*, "vol 1: ", volume1, "vol 2: ", volume2
+        print*, "Volume difference is: ", volume2-volume1
+        print*, "Printing absolute difference: ", abs(volume2-volume1)
     
     !-----USING write FUNCTION-----!
-    write(*,10)"Volume difference using write function: ", volume2-volume1
-    10 format(a,f10.3)
+        write(*,10)"Volume difference using write function: ", volume2-volume1
+        10 format(a,f10.3)
 
+    ! Entering recursion loop
+        print*,"Do another calculation; y of Y for yes and any other key to exit: "
+        read*,response
+        if(response.ne."Y" .and. response.ne."y") stop                            !--or statement
+    endDo
 end program vol
 
 !-------------------------------------------------------------------
