@@ -1,16 +1,21 @@
-program readData
-
+program reader
+    
     implicit none
+    character(len=200)::atom, datafile
+    !real,intent(in)::charge, x, y, z
+    
+    ! Open old file and read it
+    open(1,file="text.file",status='old')
+    read(1,*) datafile
+    write(*,*) datafile
 
-    integer:: x, y, z
-
-    open(unit=2, file='file_to_be_read.txt')
-        read(2,*) x, y, z
-    close(2)
-
-    open(unit=3, file='file_to_be_read_copy.txt')
-        write(3,*) x, y , z
-    close(3)
+    ! open new file and write to it
+    !open(2,file="newfile.file)",status='new')
+    !write(2,'(4A,1X,5A,1X,4A)') name1,name2,name3
+    !close(1)
+    !close(2)
 
 
-end program readData
+
+end program reader 
+
