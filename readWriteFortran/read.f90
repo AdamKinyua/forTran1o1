@@ -1,19 +1,26 @@
 program reader
     
     implicit none
-    character(len=200)::atom, datafile
-    !real,intent(in)::charge, x, y, z
-    
-    ! Open old file and read it
-    open(1,file="text.file",status='old')
-    read(1,*) datafile
-    write(*,*) datafile
+    character(len=50)::input,string
+    integer::i,j
+    real::realnum
 
-    ! open new file and write to it
-    !open(2,file="newfile.file)",status='new')
-    !write(2,'(4A,1X,5A,1X,4A)') name1,name2,name3
-    !close(1)
-    !close(2)
+    print'(A)', 'Hello'
+    do i = 1,8
+      read(5,'(A)') input
+      write(*,*) input
+      string = ''
+      do j = 1, len(trim(input))
+        write(*,*) input(j:j)
+        if(input(j:j).ne.' ') then
+          string = trim(string)//input(j:j)
+        else
+          read(string,'(F10.6)') realnum
+          write(*,*) realnum
+          string = ''
+        endIf
+      endDo
+    endDo
 
 
 
